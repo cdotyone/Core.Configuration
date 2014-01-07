@@ -15,8 +15,8 @@ namespace Civic.Core.Configuration
 		private const string VALUE = "value";
 		private string _value;
 
-		private readonly Dictionary<string, string> _attributes = new Dictionary<string, string>();
-		private readonly Dictionary<string, INamedElement> _children = new Dictionary<string, INamedElement>();
+		private Dictionary<string, string> _attributes = new Dictionary<string, string>();
+		private Dictionary<string, INamedElement> _children = new Dictionary<string, INamedElement>();
 
 		/// <summary>
 		/// The name of the element or entry
@@ -52,11 +52,13 @@ namespace Civic.Core.Configuration
 		public Dictionary<string, string> Attributes
 		{
 			get { return _attributes; }
+            set { _attributes = value; }
 		}
 
 		public Dictionary<string, INamedElement> Children
 		{
 			get { return _children; }
+            set { _children = value; }
 		}
 
 		public void DeserializeElement(XmlReader reader)

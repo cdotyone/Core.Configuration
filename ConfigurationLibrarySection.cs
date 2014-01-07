@@ -6,7 +6,7 @@ namespace Civic.Core.Configuration
 	public class ConfigurationLibrarySection : ConfigurationSection
 	{
 		/// <summary>
-		/// The current configuration for the header footer
+		/// The current configuration for the configuration library
 		/// </summary>
 		public static ConfigurationLibrarySection Current
 		{
