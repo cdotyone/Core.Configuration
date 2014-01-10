@@ -158,7 +158,7 @@ namespace Civic.Core.Configuration
                     }
 
                     if (!string.IsNullOrEmpty(section.Assembly) && !string.IsNullOrEmpty(section.Type))
-                        DeserializeTypedSection(sectionNode, section);
+                        deserializeTypedSection(sectionNode, section);
                     else
                     {
                         section.DeserializeElement(new XmlNodeReader(sectionNode), false);
@@ -205,11 +205,11 @@ namespace Civic.Core.Configuration
             {
                 case "add":
                     if (sectionNode.Attributes != null)
-                        AddAsNamedElement(sectionNode, parent);
+                        addAsNamedElement(sectionNode, parent);
                     break;
                 case "remove":
                     if (sectionNode.Attributes != null)
-                        RemoveNamedElement(sectionNode, parent);
+                        removeNamedElement(sectionNode, parent);
                     break;
                 case "clear":
                     parent.Children.Clear(); // clear all named children
@@ -260,7 +260,7 @@ namespace Civic.Core.Configuration
             }
         }
 
-        private static void RemoveNamedElement(XmlNode sectionNode, INamedElement parent)
+        private static void removeNamedElement(XmlNode sectionNode, INamedElement parent)
         {
             if (sectionNode.Attributes == null) throw new ConfigurationErrorsException(string.Format(REMOVE_REQUIRES_NAME, sectionNode));
             var nameAttr = sectionNode.Attributes["name"];
@@ -272,7 +272,7 @@ namespace Civic.Core.Configuration
                 parent.Children.Remove(name);
         }
 
-        private static void AddAsNamedElement(XmlNode sectionNode, INamedElement parent)
+        private static void addAsNamedElement(XmlNode sectionNode, INamedElement parent)
         {
             if (sectionNode.Attributes == null) throw new ConfigurationErrorsException(string.Format(ADDS_REQUIRES_NAME, sectionNode));
             var nameAttr = sectionNode.Attributes["name"];
@@ -288,7 +288,7 @@ namespace Civic.Core.Configuration
         /// </summary>
         /// <param name="xmlNode">The XmlNode containing the serilized data.</param>
         /// <param name="section">Section that is being deserialized</param>
-        private static void DeserializeTypedSection(XmlNode xmlNode, Section section)
+        private static void deserializeTypedSection(XmlNode xmlNode, Section section)
         {
             var dynSection = DynamicInstance.CreateInstance(section.Assembly, section.Type);
             if (dynSection != null)
@@ -314,6 +314,23 @@ namespace Civic.Core.Configuration
                     section.Data = serializer.Deserialize(reader);
                 }
 
+            }
+        }
+
+        protected new object this[String propertyName]
+        {
+            get
+            {
+                ConfigurationProperty prop = Properties[propertyName];
+                if (!Attributes.ContainsKey(propertyName)) return prop.DefaultValue;
+                return Convert.ChangeType(Attributes[propertyName], prop.Type);
+            }
+            set
+            {
+                lock (_attributes)
+                {
+                    Attributes[propertyName] = value.ToString();
+                }
             }
         }
 
