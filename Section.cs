@@ -22,6 +22,11 @@ namespace Civic.Core.Configuration
         private const string ADDS_REQUIRES_NAME = "All <add> tags must have a name property: {0}";
         private const string ADDS_REQUIRES_UNIQUE_NAME = "All <add> tags must have a unique name property: {0}";
 
+        public Section()
+        {
+            CheckSum = string.Empty;
+        }
+
         /// <summary>
         /// Returns the NULL for the XML schema for the configuration section.
         /// </summary>
@@ -334,32 +339,6 @@ namespace Civic.Core.Configuration
             }
         }
 
-        //static public Section Create(ConfigurationSection section, string name)
-        //{
-        //    return Create(section, name, new Section());
-        //}
-
-        //static public Section Create(ConfigurationSection section, string name, Section newSection)
-        //{
-
-        //    var type = section.GetType();
-        //    newSection.Assembly = type.Assembly.FullName;
-        //    newSection.Type = type.FullName;
-        //    newSection.Name = name;
-
-        //    var xRoot = new XmlRootAttribute(name);
-
-        //    var mem = new MemoryStream();
-        //    var writer = XmlWriter.Create(mem);
-        //    var serializer = new XmlSerializer(type, xRoot);
-        //    serializer.Serialize(writer,section);
-        //    mem.Seek(0, SeekOrigin.Begin);
-
-        //    var xdoc = new XmlDocument();
-        //    xdoc.Load(mem);
-        //    newSection.Data = xdoc;
-
-        //    return newSection;
-        //}
+        public string CheckSum { get; set; }
     }
 }
