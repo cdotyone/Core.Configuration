@@ -76,6 +76,7 @@
     <Compile Include="ConfigurationRedirection.cs" />
     <Compile Include="ConfigurationLibrarySection.cs" />
     <Compile Include="CoreConfigurationProvider.cs" />
+    <Compile Include="CivicSection.cs" />
     <Compile Include="Framework\DynamicInstance.cs" />
     <Compile Include="EnumeratorWrapper.cs" />
     <Compile Include="Framework\ResourceHelper.cs" />
