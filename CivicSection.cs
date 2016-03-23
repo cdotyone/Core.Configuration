@@ -13,7 +13,8 @@ namespace Civic.Core.Configuration
             get
             {
                 if (_coreConfig == null) _coreConfig = (CivicSection) ConfigurationManager.GetSection(SectionName);
-                return _coreConfig;
+                if (_coreConfig != null) return _coreConfig;
+                return new CivicSection();
             }
         }
 
