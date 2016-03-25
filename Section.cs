@@ -16,8 +16,8 @@ namespace Civic.Core.Configuration
     public class Section : ConfigurationSection, INamedElement
     {
         private string _filename;
-        private readonly Dictionary<string, string> _attributes = new Dictionary<string, string>();
-        private readonly Dictionary<string, INamedElement> _children = new Dictionary<string, INamedElement>();
+        private Dictionary<string, string> _attributes = new Dictionary<string, string>();
+        private Dictionary<string, INamedElement> _children = new Dictionary<string, INamedElement>();
         private const string REMOVE_REQUIRES_NAME = "All <remove> tags must have a name property: {0}";
         private const string ADDS_REQUIRES_NAME = "All <add> tags must have a name property: {0}";
         private const string ADDS_REQUIRES_UNIQUE_NAME = "All <add> tags must have a unique name property: {0}";
@@ -59,6 +59,7 @@ namespace Civic.Core.Configuration
         public Dictionary<string, string> Attributes
         {
             get { return _attributes; }
+            set { _attributes = value; }
         }
 
         public string Get(string name, string defaultValue = "")
@@ -70,6 +71,7 @@ namespace Civic.Core.Configuration
         public Dictionary<string, INamedElement> Children
         {
             get { return _children; }
+            set { _children = value; } 
         }
 
         [ConfigurationProperty(Constants.CONFIG_PROP_PROVIDER, DefaultValue = Constants.CONFIG_PROP_DEFAULTPROVIDER)]
