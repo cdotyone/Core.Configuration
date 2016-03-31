@@ -10,7 +10,11 @@
     	public const string CONFIG_PROP_PROVIDERS = "providers";
 		public const string CONFIG_PROP_REDIRECTIONS = "redirections";
 
-    	internal class SR
+        // is the server in development mode
+        public const string CONFIG_DEVMODE_PROP = "devMode";
+        public const bool CONFIG_DEVMODE_DEFAULT = false;
+
+        internal class SR
     	{
     		public const string CONFIG_KEY_NULL = "ConfigHelper_Key_Null";
     	}

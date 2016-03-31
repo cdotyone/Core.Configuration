@@ -28,5 +28,16 @@ namespace Civic.Core.Configuration
         {
             get { return "civic"; }
         }
+
+
+        /// <summary>
+        /// Gets or sets if the site is in UI development mode
+        /// </summary>
+        [ConfigurationProperty(Constants.CONFIG_DEVMODE_PROP, IsRequired = false, DefaultValue = Constants.CONFIG_DEVMODE_DEFAULT)]
+        public bool DevelopmentMode
+        {
+            get { return (bool)base[Constants.CONFIG_DEVMODE_PROP]; }
+            set { base[Constants.CONFIG_DEVMODE_PROP] = value; }
+        }
     }
 }
