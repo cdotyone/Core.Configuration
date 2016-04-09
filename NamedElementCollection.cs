@@ -107,5 +107,17 @@ namespace Civic.Core.Configuration
             var namedElementValue = (T)element;
             return namedElementValue.Name;
         }
+
+        public static NamedElementCollection<T> FromDictionary(Dictionary<string,T> from )
+        {
+            NamedElementCollection<T> to = new NamedElementCollection<T>();
+
+            foreach (var pair in from)
+            {
+                to[pair.Key] = pair.Value;
+            }
+
+            return to;
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace Civic.Core.Configuration.Providers
         private ConnectionStringsSection _connectionStrings;
         private AppSettingsSection _appSettings;
         private static readonly Dictionary<string,ConfigurationSection> _cache = new Dictionary<string, ConfigurationSection>();
-        public CoreConfigurationProvider Configuration { get; set; }
+        public INamedElement Configuration { get; set; }
 
         /// <summary>
         /// Gets the requested configuration section.
