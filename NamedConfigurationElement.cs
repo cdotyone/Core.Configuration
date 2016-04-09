@@ -14,11 +14,12 @@ namespace Civic.Core.Configuration
 		private string _name;
 		private const string VALUE = "value";
 		private string _value;
+        private string _checkSum = "";
 
-		private Dictionary<string, string> _attributes = new Dictionary<string, string>();
+        private Dictionary<string, string> _attributes = new Dictionary<string, string>();
 		private Dictionary<string, INamedElement> _children = new Dictionary<string, INamedElement>();
 
-		/// <summary>
+	    /// <summary>
 		/// The name of the element or entry
 		/// </summary>
         [ConfigurationProperty(NAME, IsKey = true, DefaultValue="Name", IsRequired = true)]
@@ -73,5 +74,10 @@ namespace Civic.Core.Configuration
         {
             base.DeserializeElement(reader,false);
         }
+
+	    public string CheckSum
+	    {
+	        get { return _checkSum; }
+	    }
     }
 }
