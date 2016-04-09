@@ -11,7 +11,7 @@ namespace Civic.Core.Configuration
         /// <summary>
         /// The configuration for this provider
         /// </summary>
-        CoreConfigurationProvider Configuration { get; set; }
+        INamedElement Configuration { get; set; }
 
         /// <summary>
         /// Gets the requested configuration section.

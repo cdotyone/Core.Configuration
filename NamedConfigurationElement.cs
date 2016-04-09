@@ -52,13 +52,21 @@ namespace Civic.Core.Configuration
 		public Dictionary<string, string> Attributes
 		{
 			get { return _attributes; }
-            set { _attributes = value; }
-		}
+            set
+            {
+                if (value != null) _attributes = value;
+                else _attributes.Clear();
+            }
+        }
 
 		public Dictionary<string, INamedElement> Children
 		{
 			get { return _children; }
-            set { _children = value; }
+		    set
+		    {
+		        if(value!=null)  _children = value;
+		        else _children.Clear();
+            }
 		}
 
 		public void DeserializeElement(XmlReader reader)
