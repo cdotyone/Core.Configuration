@@ -51,7 +51,7 @@
     <AssemblyOriginatorKeyFile>..\References\civic.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
-    <OutputPath>bin\Nuget-45\</OutputPath>
+    <OutputPath>bin\Nuget\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
