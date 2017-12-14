@@ -8,8 +8,7 @@ build:
     VERSION: '$CI_BUILD_ID.0'
   script:
     - 'echo %CI_PROJECT_DIR%'
-    - 'echo %CI_BUILD_ID%'
-    - 'call C:\Builds\.nuget\set.bat %VERSION% %CI_PROJECT_DIR%\References'
+    - 'C:\Builds\.nuget\AssemblyVersionSetter.exe -t -e %VERSION% %CI_PROJECT_DIR%\References'
     - '"C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\msbuild.exe" /t:restore Civic.Core.%CI_PROJECT_NAME%.sln /p:RestoreConfigFile=C:\Builds\.nuget\NuGet.Config /p:Configuration="Nuget"'
     - '"C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\msbuild.exe" Civic.Core.%CI_PROJECT_NAME%.sln /m /tv:15.0 /p:DoEvents=false /p:Configuration="Nuget" /p:Platform="Any Cpu"'
     - '"C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\msbuild.exe" /t:restore Civic.Core.%CI_PROJECT_NAME%.sln /p:RestoreConfigFile=C:\Builds\.nuget\NuGet.Config /p:Configuration="Nuget-46"'
