@@ -1,11 +1,11 @@
-variables:
-    VERSION: '$$CI_BUILD_ID.0'
 stages:
   - build
   - package
 
 build:
   stage: build
+  variables:
+    VERSION: '$$CI_BUILD_ID.0'
   script:
     - 'echo %CI_PROJECT_DIR%'
     - 'echo %CI_BUILD_ID%'
