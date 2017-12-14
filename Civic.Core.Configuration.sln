@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Civic.Core.Configuration", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{2645500B-8125-4985-809B-179E693B1AF7}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		Nuget\Civic.Core.Configuration.nuspec = Nuget\Civic.Core.Configuration.nuspec
 		Jenkinsfile = Jenkinsfile
 	EndProjectSection
