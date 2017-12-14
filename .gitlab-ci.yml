@@ -20,7 +20,7 @@ package:
   stage: package
   script:      
     - 'echo %CI_PROJECT_DIR%'
-    - '"call C:\Builds\.nuget\pack.bat" %CI_PROJECT_DIR% %CI_PROJECT_DIR%'
+    - 'call C:\Builds\.nuget\pack.bat %CI_PROJECT_DIR% %CI_PROJECT_DIR%'
   tags:
     - msbuild
   
