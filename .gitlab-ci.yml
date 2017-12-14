@@ -4,6 +4,6 @@ stages:
 build:
   stage: build
   script:
-    - C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\msbuild.exe /t:restore Civic.Core.%CI_PROJECT_NAME%.sln /p:RestoreConfigFile=C:\Builds\.nuget\NuGet.Config /p:Configuration="Nuget"
+    - 'C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\msbuild.exe /t:restore Civic.Core.%CI_PROJECT_NAME%.sln /p:RestoreConfigFile=C:\Builds\.nuget\NuGet.Config /p:Configuration="Nuget"'
   tags:
     - msbuild
