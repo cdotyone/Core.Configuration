@@ -15,4 +15,4 @@ build:
     - 'call C:\Builds\.nuget\pack2.bat %CI_PROJECT_DIR% %CI_PROJECT_DIR%'
   tags:
     - msbuild
-  
+ 
