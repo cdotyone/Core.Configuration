@@ -8,7 +8,7 @@ namespace Civic.Core.Configuration
 	/// <summary>
 	/// Utility for encrypting and decrypting data.
 	/// </summary>
-	public static class CryptoHelper
+	internal static class CryptoHelper
 	{
 		#region Fields
 		private static readonly MethodInfo _EncDecMethod;
