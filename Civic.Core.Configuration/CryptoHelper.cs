@@ -44,11 +44,6 @@ namespace Civic.Core.Configuration
 			}
 		}
 
-	    public static string NotUsedMethod()
-	    {
-	        return "This is a test, and will be removed in minutes";
-	    }
-
 
 		/// <summary>
 		/// Encrypts a string.
