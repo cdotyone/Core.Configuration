@@ -19,6 +19,7 @@ Global
 		Nuget-40|Any CPU = Nuget-40|Any CPU
 		Nuget-45|Any CPU = Nuget-45|Any CPU
 		Nuget-46|Any CPU = Nuget-46|Any CPU
+		Nuget-47|Any CPU = Nuget-47|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
@@ -32,6 +33,8 @@ Global
 		{4243BF37-B025-4AD1-874E-8B118869C5CF}.Nuget-45|Any CPU.Build.0 = Nuget-45|Any CPU
 		{4243BF37-B025-4AD1-874E-8B118869C5CF}.Nuget-46|Any CPU.ActiveCfg = Nuget-46|Any CPU
 		{4243BF37-B025-4AD1-874E-8B118869C5CF}.Nuget-46|Any CPU.Build.0 = Nuget-46|Any CPU
+		{4243BF37-B025-4AD1-874E-8B118869C5CF}.Nuget-47|Any CPU.ActiveCfg = Nuget-47|Any CPU
+		{4243BF37-B025-4AD1-874E-8B118869C5CF}.Nuget-47|Any CPU.Build.0 = Nuget-47|Any CPU
 		{4243BF37-B025-4AD1-874E-8B118869C5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4243BF37-B025-4AD1-874E-8B118869C5CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
