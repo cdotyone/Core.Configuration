@@ -44,6 +44,7 @@ namespace Civic.Core.Configuration
 			}
 		}
 
+
 		/// <summary>
 		/// Encrypts a string.
 		/// </summary>
