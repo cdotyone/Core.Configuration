@@ -36,7 +36,11 @@ namespace Civic.Core.Configuration
         [ConfigurationProperty(Constants.CONFIG_DEVMODE_PROP, IsRequired = false, DefaultValue = Constants.CONFIG_DEVMODE_DEFAULT)]
         public bool DevelopmentMode
         {
-            get { return (bool)base[Constants.CONFIG_DEVMODE_PROP]; }
+            get
+            {
+                var val = GetAttribute(Constants.CONFIG_DEVMODE_PROP,"false"); 
+                return val=="true";
+            }
             set { base[Constants.CONFIG_DEVMODE_PROP] = value; }
         }
 
