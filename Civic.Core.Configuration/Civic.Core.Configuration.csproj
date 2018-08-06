@@ -105,6 +105,7 @@
     <Compile Include="ConfigurationLibrarySection.cs" />
     <Compile Include="CoreConfigurationProvider.cs" />
     <Compile Include="CivicSection.cs" />
+    <Compile Include="CryptoHelper.cs" />
     <Compile Include="Framework\DynamicInstance.cs" />
     <Compile Include="EnumeratorWrapper.cs" />
     <Compile Include="Framework\ResourceHelper.cs" />
@@ -121,7 +122,6 @@
     <Compile Include="Section.cs" />
     <Compile Include="SerializableConfigurationSection.cs" />
     <Compile Include="StringResources.cs" />
-    <Compile Include="CryptoHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\References\civic.snk">
