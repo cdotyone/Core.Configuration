@@ -12,14 +12,6 @@
     <AssemblyName>Civic.Core.Configuration</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
-    <SccProjectName>
-    </SccProjectName>
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccAuxPath>
-    </SccAuxPath>
-    <SccProvider>
-    </SccProvider>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
@@ -31,6 +23,18 @@
     <DebugType>portable</DebugType>
     <ci>true</ci>
   </PropertyGroup>
+  <Target Name="AppendSourceLinkPersonalAccessToken"
+          BeforeTargets="GenerateSourceLinkFile"
+          DependsOnTargets="$(SourceLinkUrlInitializerTargets)">
+    <PropertyGroup>
+      <GitLabPAT Condition="'$(GitLabPAT)'==''">KKam4xqqNBTogtwuKUDt</GitLabPAT>
+    </PropertyGroup>
+    <ItemGroup>
+      <SourceRoot>
+        <SourceLinkUrl>%(SourceLinkUrl)?private_token=$(GitLabPAT)</SourceLinkUrl>
+      </SourceRoot>
+    </ItemGroup>
+  </Target>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
