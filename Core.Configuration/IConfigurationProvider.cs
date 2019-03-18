@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Configuration;
 
-namespace Civic.Core.Configuration
+namespace Core.Configuration
 {
     /// <summary>
     /// Interface for configuration providers

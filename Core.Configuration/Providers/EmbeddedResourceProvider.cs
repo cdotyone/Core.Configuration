@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Configuration;
-using Civic.Core.Configuration.Framework;
+using Core.Configuration.Framework;
 
-namespace Civic.Core.Configuration.Providers
+namespace Core.Configuration.Providers
 {
     /// <summary>
     /// Basic provider toload configurations from an embedded source.

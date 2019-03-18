@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Configuration.Internal;
 using System.IO;
 using System.Reflection;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
+using Core.Configuration.Framework;
 
-namespace Civic.Core.Configuration
+namespace Core.Configuration
 {
     /// <summary>
     /// Represents a configuration section that can be serialized.

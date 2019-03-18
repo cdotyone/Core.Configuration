@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Civic.Core.Configuration
+namespace Core.Configuration
 {
 	/// <summary>
 	/// Interface that represents a named element under a configuration section

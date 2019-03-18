@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Collections.Generic;
 using System.Xml;
 
-namespace Civic.Core.Configuration
+namespace Core.Configuration
 {
 	/// <summary>
 	/// A named element under configuration section

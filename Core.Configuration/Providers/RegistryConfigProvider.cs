@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Xml.Linq;
-using Microsoft.Win32;
 
-namespace Civic.Core.Configuration.Providers
+namespace Core.Configuration.Providers
 {
     public class RegistryConfigProvider : IConfigurationProvider
     {

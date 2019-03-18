@@ -2,7 +2,7 @@
 using System.Resources;
 using System.Threading;
 
-namespace Civic.Core.Configuration
+namespace Core.Configuration
 {
     internal class StringResources
     {

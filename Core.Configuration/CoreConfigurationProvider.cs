@@ -1,6 +1,6 @@
-﻿using System.Configuration;
+﻿using Core.Configuration.Framework;
 
-namespace Civic.Core.Configuration
+namespace Core.Configuration
 {
 	public class CoreConfigurationProvider : NamedConfigurationElement
 	{

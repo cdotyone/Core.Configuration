@@ -1,9 +1,8 @@
-﻿using System.Configuration;
-using System.Xml;
+﻿using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
 
-namespace Civic.Core.Configuration
+namespace Core.Configuration
 {
 	/// <summary>
 	/// Copy of SerializableConfigurationSection EntLib 4.1
