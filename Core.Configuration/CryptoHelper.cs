@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Reflection;
-using System.Security.Cryptography;
 using System.Text;
 
-namespace Civic.Core.Configuration
+namespace Core.Configuration
 {
 	/// <summary>
 	/// Utility for encrypting and decrypting data.

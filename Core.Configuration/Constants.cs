@@ -1,4 +1,4 @@
-﻿namespace Civic.Core.Configuration
+﻿namespace Core.Configuration
 {
     internal class Constants
     {

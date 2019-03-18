@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Xml.Linq;
 
-namespace Civic.Core.Configuration.Providers
+namespace Core.Configuration.Providers
 {
     /// <summary>
     /// Basic provider toload configurations from an embedded source.
