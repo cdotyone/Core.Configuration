@@ -1,4 +1,6 @@
-﻿namespace Core.Configuration
+﻿using System.Configuration;
+
+namespace Core.Configuration
 {
 
     public class CivicSection : Section
