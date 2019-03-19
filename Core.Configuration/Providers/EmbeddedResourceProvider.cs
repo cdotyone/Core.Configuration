@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using Core.Configuration.Framework;
 
 namespace Core.Configuration.Providers

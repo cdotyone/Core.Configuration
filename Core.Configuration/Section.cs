@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Configuration.Internal;
 using System.IO;
 using System.Reflection;
 using System.Xml;
@@ -245,13 +247,6 @@ namespace Core.Configuration
 
                 foreach (XmlAttribute attribute in sectionNode.Attributes)
                 {
-                    if (attribute.Value.StartsWith("##ENC##"))
-                    {
-                        var value = attribute.Value.Substring(7);
-                        value = CryptoHelper.Decrypt(value);
-                        attribute.Value = value;
-                    }
-
                     element.Attributes.Add(attribute.Name, attribute.Value);
                 }
             }
