@@ -67,6 +67,12 @@ namespace Core.Configuration
             }
             return string.IsNullOrEmpty(schemaName) ? name : schemaName;
         }
+
+        public Dictionary<string, string> DefaultClaims
+        {
+            get { return _claimsDefaults; }
+            set { _claimsDefaults = value; }
+        }
     }
 }
 
