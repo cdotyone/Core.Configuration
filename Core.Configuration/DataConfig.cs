@@ -67,35 +67,6 @@ namespace Core.Configuration
             }
             return string.IsNullOrEmpty(schemaName) ? name : schemaName;
         }
-
-        public Dictionary<string,string> GetClaimsDefaults()
-        {
-            if (_claimsDefaults != null) return _claimsDefaults;
-
-            if (Children.ContainsKey("claims"))
-            {
-                var claims = Children["claims"];
-
-                var defaults = new Dictionary<string, string>();
-
-                foreach (var pairs in claims.Children)
-                {
-                    defaults[pairs.Value.Attributes["name"]] = pairs.Value.Attributes["claim"];
-                }
-
-                _claimsDefaults = defaults;
-            }
-            else
-            {
-                var defaults = new Dictionary<string, string>();
-
-                defaults["@ouid"] = StandardClaimTypes.ORGANIZATION_ID;
-                defaults["@personuid"] = StandardClaimTypes.PERSON_ID;
-
-                _claimsDefaults = defaults;
-            }
-            return _claimsDefaults;
-        }
     }
 }
 
