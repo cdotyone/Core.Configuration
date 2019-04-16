@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Core.Configuration
+namespace Stack.Core.Configuration
 {
     public class DataConfig : NamedConfigurationElement
     {

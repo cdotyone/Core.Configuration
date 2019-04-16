@@ -1,8 +1,8 @@
 ﻿using System.Configuration;
-using Core.Configuration.Framework;
-using Core.Configuration.Providers;
+using Stack.Core.Configuration.Framework;
+using Stack.Core.Configuration.Providers;
 
-namespace Core.Configuration
+namespace Stack.Core.Configuration
 {
 	public class ConfigurationProviderElement : NamedConfigurationElement
 	{

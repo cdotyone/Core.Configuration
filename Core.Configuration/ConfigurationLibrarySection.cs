@@ -1,7 +1,7 @@
 ﻿using System.Configuration;
-using Core.Configuration.Providers;
+using Stack.Core.Configuration.Providers;
 
-namespace Core.Configuration
+namespace Stack.Core.Configuration
 {
 	public class ConfigurationLibrarySection : ConfigurationSection
 	{

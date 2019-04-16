@@ -1,4 +1,4 @@
-﻿namespace Core.Configuration
+﻿namespace Stack.Core.Configuration
 {
     internal class Constants
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 
-namespace Core.Configuration
+namespace Stack.Core.Configuration
 {
     public static class ConfigurationFactory
     {

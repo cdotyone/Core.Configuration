@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Core.Configuration
+namespace Stack.Core.Configuration
 {
     /// <devdoc>
     /// Represents a genereic enumerator
