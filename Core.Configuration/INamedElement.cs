@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Core.Configuration
+namespace Stack.Core.Configuration
 {
 	/// <summary>
 	/// Interface that represents a named element under a configuration section

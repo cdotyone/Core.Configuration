@@ -2,7 +2,7 @@
 using System.Resources;
 using System.Threading;
 
-namespace Core.Configuration
+namespace Stack.Core.Configuration
 {
     internal class StringResources
     {

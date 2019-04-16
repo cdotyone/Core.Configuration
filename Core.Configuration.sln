@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{2645500B
 		Nuget\Stack.Core.Configuration.nuspec = Nuget\Stack.Core.Configuration.nuspec
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Configuration", "Core.Configuration\Core.Configuration.csproj", "{44A7C9FF-53DF-44AE-AC1F-C9198234F6DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stack.Core.Configuration", "Core.Configuration\Stack.Core.Configuration.csproj", "{44A7C9FF-53DF-44AE-AC1F-C9198234F6DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

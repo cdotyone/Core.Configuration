@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Configuration;
 
-namespace Core.Configuration.Providers
+namespace Stack.Core.Configuration.Providers
 {
     /// <summary>
     /// Basic provider for getting configurations from normal .config files.

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 
-namespace Core.Configuration
+namespace Stack.Core.Configuration
 {
     /// <summary>
 	/// Represents a collection of <see cref="NamedConfigurationElement"/> objects.

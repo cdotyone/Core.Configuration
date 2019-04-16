@@ -3,7 +3,7 @@ using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
 
-namespace Core.Configuration
+namespace Stack.Core.Configuration
 {
 	/// <summary>
 	/// Copy of SerializableConfigurationSection EntLib 4.1
