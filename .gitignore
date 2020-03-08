@@ -114,7 +114,3 @@ dist
 app/bower_components
 .idea
 .nuget
-Civic.Inspector/app
-Civic.Inspector.UI/.idea
-Civic.Inspector/uploads/*
-!Civic.Inspector/uploads/*.txt

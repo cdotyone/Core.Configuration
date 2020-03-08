@@ -1,4 +1,4 @@
-﻿namespace Stack.Core.Configuration
+﻿namespace Core.Configuration
 {
     internal class Constants
     {
@@ -16,7 +16,7 @@
 
 
         public const string CONFIG_CLIENTCODE_PROP = "client";
-        public const string CONFIG_CLIENTCODE_DEFAULT = "CIVIC";
+        public const string CONFIG_CLIENTCODE_DEFAULT = "TEN";
 
         public const string CONFIG_ENVCODE_PROP = "env";
         public const string CONFIG_ENVCODE_DEFAULT = "PROD";

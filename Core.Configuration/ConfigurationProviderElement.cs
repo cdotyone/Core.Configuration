@@ -1,8 +1,8 @@
 ﻿using System.Configuration;
-using Stack.Core.Configuration.Framework;
-using Stack.Core.Configuration.Providers;
+using Core.Configuration.Framework;
+using Core.Configuration.Providers;
 
-namespace Stack.Core.Configuration
+namespace Core.Configuration
 {
 	public class ConfigurationProviderElement : NamedConfigurationElement
 	{
@@ -13,7 +13,7 @@ namespace Stack.Core.Configuration
 		/// <summary>
 		/// The "assembly" name given of the provider.
 		/// 
-		/// In the form: assembly="Civic.Core.Configuration, Version=1.0.0.0, Culture=neutral"
+		/// In the form: assembly="Core.Configuration, Version=1.0.0.0, Culture=neutral"
 		/// </summary>
 		[ConfigurationProperty(ASSEMBLY, IsRequired = true)]
 		public string AssemblyName
@@ -30,7 +30,7 @@ namespace Stack.Core.Configuration
 		/// <summary>
 		/// The "type" name of the provider.
 		/// 
-		/// In the form of type="Civic.Core.Configuration.ConfigFileProvider"
+		/// In the form of type="Core.Configuration.ConfigFileProvider"
 		/// </summary>
 		[ConfigurationProperty(TYPE, IsRequired = true)]
 		public string TypeName

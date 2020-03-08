@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 
-namespace Stack.Core.Configuration
+namespace Core.Configuration
 {
     public class DataConfig : NamedConfigurationElement
     {
         protected const string DEFAULT_CONNECTION_STRING = "default";
-        private static CivicSection _coreConfig;
+        private static CoreSection _coreConfig;
         private static DataConfig _current;
         private string _default;
         private Dictionary<string, string> _claimsDefaults;
@@ -29,7 +29,7 @@ namespace Stack.Core.Configuration
             {
                 if (_current != null) return _current;
 
-                if (_coreConfig == null) _coreConfig = CivicSection.Current;
+                if (_coreConfig == null) _coreConfig = CoreSection.Current;
                 _current = new DataConfig(_coreConfig.Children.ContainsKey(SectionName) ? _coreConfig.Children[SectionName] : null);
                 return _current;
             }

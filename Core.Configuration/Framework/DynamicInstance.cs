@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace Stack.Core.Configuration.Framework
+namespace Core.Configuration.Framework
 {
 	public static class DynamicInstance
 	{

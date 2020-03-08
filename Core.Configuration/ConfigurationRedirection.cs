@@ -1,7 +1,7 @@
 using System;
 using System.Configuration;
 
-namespace Stack.Core.Configuration
+namespace Core.Configuration
 {
 	public class ConfigurationRedirection : NamedConfigurationElement
 	{
@@ -12,7 +12,7 @@ namespace Stack.Core.Configuration
 		/// <summary>
 		/// The "assembly" name given of the provider.
 		/// 
-		/// In the form: assembly="Civic.Core.Configuration, Version=1.0.0.0, Culture=neutral"
+		/// In the form: assembly="Core.Configuration, Version=1.0.0.0, Culture=neutral"
 		/// </summary>
 		[ConfigurationProperty(ASSEMBLY, IsRequired = true)]
 		public string AssemblyName

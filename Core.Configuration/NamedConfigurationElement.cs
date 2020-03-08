@@ -2,7 +2,7 @@
 using System.Configuration;
 using System.Xml;
 
-namespace Stack.Core.Configuration
+namespace Core.Configuration
 {
 	/// <summary>
 	/// A named element under configuration section
