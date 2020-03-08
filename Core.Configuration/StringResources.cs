@@ -2,7 +2,7 @@
 using System.Resources;
 using System.Threading;
 
-namespace Stack.Core.Configuration
+namespace Core.Configuration
 {
     internal class StringResources
     {
@@ -12,7 +12,7 @@ namespace Stack.Core.Configuration
 
 		StringResources()
 		{
-			_resources = new ResourceManager("Civic.Core.Configuration.Properties.Resources", GetType().Assembly);
+			_resources = new ResourceManager("Core.Configuration.Properties.Resources", GetType().Assembly);
 		}
 
 		private static StringResources GetLoader()

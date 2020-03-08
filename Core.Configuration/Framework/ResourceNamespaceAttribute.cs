@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Stack.Core.Configuration.Framework
+namespace Core.Configuration.Framework
 {
 	/// <summary>
 	/// Allows control to redirect the ResourceManager to use a different namespace then the control is in

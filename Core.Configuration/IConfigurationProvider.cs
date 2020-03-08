@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Configuration;
 
-namespace Stack.Core.Configuration
+namespace Core.Configuration
 {
     /// <summary>
     /// Interface for configuration providers

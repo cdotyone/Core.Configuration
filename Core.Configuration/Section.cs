@@ -7,9 +7,9 @@ using System.Reflection;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
-using Stack.Core.Configuration.Framework;
+using Core.Configuration.Framework;
 
-namespace Stack.Core.Configuration
+namespace Core.Configuration
 {
     /// <summary>
     /// Represents a configuration section that can be serialized.

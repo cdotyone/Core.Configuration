@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Configuration;
-using Stack.Core.Configuration.Framework;
+using Core.Configuration.Framework;
 
-namespace Stack.Core.Configuration.Providers
+namespace Core.Configuration.Providers
 {
     /// <summary>
     /// Basic provider toload configurations from an embedded source.

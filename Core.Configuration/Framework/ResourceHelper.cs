@@ -3,7 +3,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 
-namespace Stack.Core.Configuration.Framework
+namespace Core.Configuration.Framework
 {
 	public static class ResourceHelper
 	{

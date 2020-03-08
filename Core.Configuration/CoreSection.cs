@@ -1,24 +1,24 @@
 ﻿using System.Configuration;
 
-namespace Stack.Core.Configuration
+namespace Core.Configuration
 {
 
-    public class CivicSection : Section
+    public class CoreSection : Section
     {
         /// <summary>
         /// The current configuration for the configuration library
         /// </summary>
-        public static CivicSection Current
+        public static CoreSection Current
         {
             get
             {
-                if (_coreConfig == null) _coreConfig = (CivicSection) ConfigurationManager.GetSection(SectionName);
+                if (_coreConfig == null) _coreConfig = (CoreSection) ConfigurationManager.GetSection(SectionName);
                 if (_coreConfig != null) return _coreConfig;
-                return new CivicSection();
+                return new CoreSection();
             }
         }
 
-        private static CivicSection _coreConfig;
+        private static CoreSection _coreConfig;
 
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace Stack.Core.Configuration
         /// </summary>
         public static string SectionName
         {
-            get { return "civic"; }
+            get { return "core"; }
         }
 
 

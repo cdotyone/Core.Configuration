@@ -1,7 +1,7 @@
 ﻿using System.Configuration;
-using Stack.Core.Configuration.Framework;
+using Core.Configuration.Framework;
 
-namespace Stack.Core.Configuration
+namespace Core.Configuration
 {
 	public class CoreConfigurationProvider : NamedConfigurationElement
 	{
