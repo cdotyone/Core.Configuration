@@ -9,10 +9,10 @@ on:
 jobs:
   build:
 
-    runs-on: windows-2019
+    runs-on: windows-latest
     strategy:
       matrix:
-        dotnet: [ '4.8.*', '5.0.0-preview.6' ]
+        dotnet: [ '2.2.108', '5.0.0-preview.6' ]
     name: Dotnet ${{ matrix.dotnet }}
     steps:
     - uses: actions/checkout@v2
