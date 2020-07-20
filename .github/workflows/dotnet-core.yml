@@ -12,7 +12,7 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        dotnet: [ '2.2.108', '5.0.0-preview.6' ]
+        dotnet: [ '2.2.108' ]
     name: Dotnet ${{ matrix.dotnet }}
     steps:
     - uses: actions/checkout@v2
