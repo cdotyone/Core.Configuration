@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{2645500B
 		Nuget\Codigo.Core.Configuration.nuspec = Nuget\Codigo.Core.Configuration.nuspec
 		commitlint.config.js = commitlint.config.js
 		.github\workflows\dotnet-core.yml = .github\workflows\dotnet-core.yml
+		package-lock.json = package-lock.json
 		package.json = package.json
 		package.version.json = package.version.json
 	EndProjectSection
