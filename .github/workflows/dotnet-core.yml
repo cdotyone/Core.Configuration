@@ -15,6 +15,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
+    - name: Check commit Messaga
       run: git log -1 --no-merges --pretty=%B > commit.msg; cat commit.msg | npx commitlint -g commitlint.config.js; rm commit.msg
 
   build:
