@@ -20,7 +20,11 @@ jobs:
       run: npm ci
     - name: Check Commit Message
       run: echo "${{github.event.head_commit.message}}" > commit.msg; cat commit.msg | npx commitlint -g commitlint.config.js; rm commit.msg
-
+    - name: Upload VERSION
+        uses: actions/upload-artifact@v1
+        with:
+          name: version
+          path: VERSION
   build:
     runs-on: windows-latest
     needs: [commit]
@@ -30,6 +34,10 @@ jobs:
     name: build ${{ matrix.dotnet }}
     steps:
     - uses: actions/checkout@v2
+    - name: Download math result for job 1
+        uses: actions/download-artifact@v1
+        with:
+          name: version
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
