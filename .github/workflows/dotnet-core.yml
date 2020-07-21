@@ -27,7 +27,7 @@ jobs:
     strategy:
       matrix:
         dotnet: [ '2.2.108' ]
-    name: Dotnet ${{ matrix.dotnet }}
+    name: build ${{ matrix.dotnet }}
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
