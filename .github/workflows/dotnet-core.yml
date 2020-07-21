@@ -21,7 +21,7 @@ jobs:
     - name: Check Commit Message
       run: echo "${{github.event.head_commit.message}}" > commit.msg; cat commit.msg | npx commitlint -g commitlint.config.js; rm commit.msg
     - name: Get Version
-      run: node node_modules/@sandbox/build-utils/utils/copyRelease; npx semantic-release
+      run: node node_modules/@codigo/build-utils/utils/copyRelease; npx semantic-release
     - name: Upload VERSION
       uses: actions/upload-artifact@v1
       with:
