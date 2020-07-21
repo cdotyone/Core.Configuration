@@ -1,10 +1,7 @@
 {
-  "name": "caching",
+  "name": "configuration",
   "version": "2.0.11",
-  "description": "Caching",
-  "dependencies": {
-    "@codigo/build-utils": "git+https://github.com/cdotyone/build-utils.git#bd1ca73d40d0a6edbf56b6c2d1df5c4005de5175"
-  },
+  "description": "configuration",
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
     "@commitlint/config-conventional": "^7.5.0",
@@ -25,32 +22,6 @@
     }
   },
   "release": {
-    "branch": "master",
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/npm",
-        {
-          "npmPublish": false
-        }
-      ],
-      "@semantic-release/changelog",
-      [
-        "@semantic-release/exec",
-        {
-          "publishCmd": "node node_modules/@sandbox/build-utils/utils/nugetPush"
-        }
-      ],
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "CHANGELOG.md",
-            "package.json"
-          ]
-        }
-      ]
-    ]
+    "branch": "master"
   }
 }
