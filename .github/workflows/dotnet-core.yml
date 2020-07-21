@@ -24,6 +24,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: version
+        path: VERSION
 
   build:
     runs-on: windows-latest
