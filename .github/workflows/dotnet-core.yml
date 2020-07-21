@@ -24,7 +24,7 @@ jobs:
       id: semver
       uses: cdotyone/github-next-version@master
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: WTW
     - name: Set .Net Version
       uses: cdotyone/github-set-net-version@master
       with:
