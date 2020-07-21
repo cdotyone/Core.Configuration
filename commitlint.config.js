@@ -1,0 +1,1 @@
+module.exports = { extends: ['@codigo/build-utils'] };
