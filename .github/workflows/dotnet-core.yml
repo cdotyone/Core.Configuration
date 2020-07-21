@@ -7,8 +7,19 @@ on:
     branches: [ master ]
 
 jobs:
+  commit:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+      run: git log -1 --no-merges --pretty=%B > commit.msg; cat commit.msg | npx commitlint -g commitlint.config.js; rm commit.msg
+
   build:
     runs-on: windows-latest
+    needs: [commit]
     strategy:
       matrix:
         dotnet: [ '2.2.108' ]
@@ -23,6 +34,7 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
+
   test:
     runs-on: ubuntu-latest
     needs: [build]
