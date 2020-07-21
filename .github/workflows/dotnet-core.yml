@@ -25,7 +25,7 @@ jobs:
       uses: cdotyone/github-next-version@master
       env:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        REVISION: "${{github.event.head_commit}}"
+        REVISION: "${{JSON.stringify(github.event.head_commit)}}"
     - name: Set .Net Version
       uses: cdotyone/github-set-net-version@master
       with:
