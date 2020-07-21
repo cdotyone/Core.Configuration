@@ -22,8 +22,8 @@ jobs:
       run: echo "${{github.event.head_commit.message}}" > commit.msg; cat commit.msg | npx commitlint -g commitlint.config.js; rm commit.msg
     - name: Upload VERSION
       uses: actions/upload-artifact@v1
-        with:
-          name: version
+      with:
+        name: version
 
   build:
     runs-on: windows-latest
