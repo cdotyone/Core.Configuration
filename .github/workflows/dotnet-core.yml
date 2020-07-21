@@ -19,7 +19,7 @@ jobs:
     - name: Install Packages
       run: npm ci
     - name: Check Commit Message
-      run: echo "${{github.event.head_commit.message}}" > commit.msg; cat commit.msg | npx commitlint -g ..//commitlint.config.js; rm commit.msg
+      run: echo "${{github.event.head_commit.message}}" > commit.msg; cat commit.msg | npx commitlint -g commitlint.config.js; rm commit.msg
 
   build:
     runs-on: windows-latest
