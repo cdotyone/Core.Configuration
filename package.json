@@ -2,6 +2,9 @@
   "name": "configuration",
   "version": "2.0.11",
   "description": "configuration",
+  "dependencies": {
+    "@codigo/build-utils": "git+https://github.com/cdotyone/build-utils.git#bd1ca73d40d0a6edbf56b6c2d1df5c4005de5175"
+  },
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
     "@commitlint/config-conventional": "^7.5.0",
