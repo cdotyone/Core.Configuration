@@ -21,58 +21,16 @@ jobs:
     - name: Check Commit Message
       run: echo "${{github.event.head_commit.message}}" > commit.msg; cat commit.msg | npx commitlint -g commitlint.config.js; rm commit.msg
     - name: 'Get Next Version'
-      id: previoustag
+      id: semver
       uses: cdotyone/github-next-version@master
       env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+    - name: Set .Net Version
+      uses: cdotyone/github-set-net-version@master
+      with:
+        version: ${{ steps.semver.version }}
     - name: Upload VERSION
       uses: actions/upload-artifact@v1
       with:
         name: version
         path: VERSION
-
-  build:
-    runs-on: windows-latest
-    needs: [commit]
-    strategy:
-      matrix:
-        dotnet: [ '2.2.108' ]
-    name: build ${{ matrix.dotnet }}
-    steps:
-    - uses: actions/checkout@v2
-    - name: Download math result for job 1
-      uses: actions/download-artifact@v1
-      with:
-          name: version
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-          dotnet-version: ${{ matrix.dotnet }}
-    - name: Install dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --configuration Release --no-restore
-
-  release:
-    # Only release on push to master
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-    runs-on: ubuntu-latest
-    # Waits for test jobs for each Node.js version to complete
-    needs: [build]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-
-      - name: Install
-        run: npm ci
-
-      - name: Release
-        run: npx semantic-release
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
