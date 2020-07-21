@@ -20,8 +20,11 @@ jobs:
       run: npm ci
     - name: Check Commit Message
       run: echo "${{github.event.head_commit.message}}" > commit.msg; cat commit.msg | npx commitlint -g commitlint.config.js; rm commit.msg
-    - name: Get Version
-      run: node node_modules/@codigo/build-utils/utils/copyRelease; npx semantic-release
+    - name: 'Get Next Version'
+      id: previoustag
+      uses: cdotyone/github-next-version@master
+      env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
     - name: Upload VERSION
       uses: actions/upload-artifact@v1
       with:
