@@ -44,7 +44,7 @@ jobs:
     - name: Build .NET
       run: dotnet pack --configuration Release --no-restore -p:PackageVersion=${{ steps.semver.outputs.new_version }} --output dist 
     - name: Conventional Changelog
-      uses: vemel/update-changelog@0.0.1
+      uses: cdotyone/update-changelog@master
       with:
         version: ${{ steps.semver.outputs.new_version }}
     - name: Tag
