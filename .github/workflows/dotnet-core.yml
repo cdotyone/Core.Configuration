@@ -43,21 +43,9 @@ jobs:
       run: dotnet restore
     - name: Build .NET
       run: dotnet pack --configuration Release --no-restore -p:PackageVersion=${{ steps.semver.outputs.new_version }} --output dist 
-    - name: Conventional Changelog
-      id: changelogs
-      uses: heineiuo/create-changelogs@master
-    - name: Tag
-      uses: mathieudutour/github-tag-action@v4.5
+    - name: Conventional Changelog Action
+      uses: TriPSs/conventional-changelog-action@v3
       with:
-        github_token: ${{ github.token }}
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@latest
-      with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
-          body: ${{ steps.changelogs.outputs.changelogs }}
-          draft: false
-          prerelease: ${{ steps.changelogs.outputs.release_type == 'prerelease' }}
-      env:
-          GITHUB_TOKEN: ${{ github.token }}
+        github-token: ${{ secrets.token }}
+        tag-prefix: 'v'
+        release-count: '20'
