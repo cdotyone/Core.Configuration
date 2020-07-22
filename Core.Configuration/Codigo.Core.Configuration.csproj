@@ -48,7 +48,6 @@
 
   <PropertyGroup>
     <PackageId>Codigo.Core.Configuration</PackageId>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>cdotyone</Authors>
     <PackageTags>Foundation,Configuration</PackageTags>
