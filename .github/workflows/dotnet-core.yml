@@ -39,11 +39,11 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
           dotnet-version: '2.2.108'
-    - name: Install dependencies
+    - name: Install Nuget Dependencies
       run: dotnet restore
-    - name: Build
+    - name: Build .NET
       run: dotnet build --configuration Release --no-restore
-    - name: Conventional Changelog Action
+    - name: Conventional Changelog
       uses: vemel/update-changelog@0.0.1
       with:
         version: ${{ steps.semver.outputs.new_version }}

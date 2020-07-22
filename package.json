@@ -3,7 +3,7 @@
   "version": "2.0.11",
   "description": "configuration",
   "dependencies": {
-    "@codigo/build-utils": "git+https://github.com/cdotyone/build-utils.git#bd1ca73d40d0a6edbf56b6c2d1df5c4005de5175"
+    "@codigo/build-utils": "git+https://github.com/cdotyone/build-utils.git#61a7c614d8de2618bad5ba050a9676be9a518d06"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
