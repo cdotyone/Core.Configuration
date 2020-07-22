@@ -16,6 +16,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
+    - name: Check Commit Message
+      run: | 
+        echo "${{github.event.head_commit.message}}" > commit.msg
+        cat commit.msg | npx commitlint -g commitlint.config.js
+        rm commit.msg
     - name: Install Packages
       run: npm ci
     - name: "Get Next Version"
