@@ -46,4 +46,16 @@
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <PackageId>Codigo.Core.Configuration</PackageId>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>cdotyone</Authors>
+    <PackageTags>Foundation,Configuration</PackageTags>
+    <Title>Codigo Core Configuration</Title>
+    <Description>Abstracts general configuration settings used by other libraries</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\LICENSE" Pack="true" PackagePath="$(PackageLicenseFile)" />
+  </ItemGroup>
 </Project>

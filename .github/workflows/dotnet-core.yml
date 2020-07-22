@@ -42,7 +42,7 @@ jobs:
     - name: Install Nuget Dependencies
       run: dotnet restore
     - name: Build .NET
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet pack --configuration Release --no-restore -p:PackageVersion=${{ steps.semver.outputs.new_version }} --output dist 
     - name: Conventional Changelog
       uses: vemel/update-changelog@0.0.1
       with:
