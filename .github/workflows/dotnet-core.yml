@@ -24,11 +24,11 @@ jobs:
       env:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
     - name: what
-      run: echo "${{ steps.semver.version }}"
+      run: echo "${{ steps.semver.outputs.version }}"
     - name: Set .Net Version
       uses: cdotyone/github-set-net-version@master
       with:
-        version: "${{ steps.semver.version }}"
+        version: "${{ steps.semver.outputs.version }}"
     - name: Upload VERSION
       uses: actions/upload-artifact@v1
       with:
