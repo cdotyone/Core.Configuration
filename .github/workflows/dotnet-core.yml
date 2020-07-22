@@ -42,6 +42,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Tag
       run: |
-        git tag v${{ steps.semver.outputs.version }}
+        git tag -l v${{ steps.semver.outputs.version }}
         git push origin --tags
-      
+      env:
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
