@@ -19,7 +19,7 @@ jobs:
       with:
         node-version: 12.x
     - name: Install Packages
-      run: npm ci
+      uses: bahmutov/npm-install@master
     - name: Check Commit Message
       run: | 
         echo "${{github.event.head_commit.message}}" > commit.msg
@@ -50,4 +50,4 @@ jobs:
     - name: Tag
       uses: mathieudutour/github-tag-action@v4.5
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ github.token }}
