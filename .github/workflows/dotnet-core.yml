@@ -44,7 +44,6 @@ jobs:
     - name: Build .NET
       run: dotnet pack --configuration Release --no-restore -p:PackageVersion=${{ steps.semver.outputs.new_version }} --output dist 
     - name: Conventional Changelog
-    - name: Create changelogs
       id: changelogs
       uses: heineiuo/create-changelogs@master
       with:
