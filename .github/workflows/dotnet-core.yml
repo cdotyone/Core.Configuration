@@ -23,8 +23,6 @@ jobs:
       uses: cdotyone/github-next-version@master
       env:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-    - name: what
-      run: echo "${{ steps.semver.outputs.version }}"
     - name: Set .Net Version
       uses: cdotyone/github-set-net-version@master
       with:
