@@ -27,8 +27,11 @@ jobs:
       uses: cdotyone/github-set-net-version@master
       with:
         version: "${{ steps.semver.outputs.version }}"
-    - name: Upload VERSION
-      uses: actions/upload-artifact@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
       with:
-        name: version
-        path: VERSION
+          dotnet-version: '2.2.108'
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
