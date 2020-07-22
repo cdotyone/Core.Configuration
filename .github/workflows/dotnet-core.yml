@@ -35,6 +35,7 @@ jobs:
       uses: cdotyone/github-set-net-version@master
       with:
         version: "${{ steps.semver.outputs.new_version }}"
+      run: npm install
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
@@ -45,6 +46,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Conventional Changelog
       uses: vemel/update-changelog@0.0.1
+      run: npm install
       with:
         version: ${{ steps.semver.outputs.new_version }}
     - name: Tag
