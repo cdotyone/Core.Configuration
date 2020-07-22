@@ -41,5 +41,7 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Tag
-      run: git tag -a v${{ steps.semver.outputs.version }} -m "[ci skip]"
+      run: |
+        git tag v${{ steps.semver.outputs.version }}
+        git push origin --tags
       
