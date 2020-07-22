@@ -26,7 +26,7 @@ jobs:
     - name: Set .Net Version
       uses: cdotyone/github-set-net-version@master
       with:
-        version: "{{ steps.semver.version }}"
+        version: "${{ steps.semver.version }}"
     - name: Upload VERSION
       uses: actions/upload-artifact@v1
       with:
