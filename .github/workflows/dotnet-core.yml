@@ -18,11 +18,6 @@ jobs:
         node-version: 12.x
     - name: Install Packages
       run: npm ci
-    - name: 'Get Previous tag'
-      id: previoustag
-      uses: "WyriHaximus/github-action-get-previous-tag@master"
-      env:
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
     - name: "Get Next Version"
       id: semver
       uses: cdotyone/github-next-version@master
