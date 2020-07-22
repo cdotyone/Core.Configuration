@@ -44,9 +44,9 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Conventional Changelog Action
-      uses: TriPSs/conventional-changelog-action@v3
+      uses: vemel/update-changelog@0.0.1
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        version: ${{ steps.semver.outputs.new_version }}
     - name: Tag
       uses: mathieudutour/github-tag-action@v4.5
       with:
