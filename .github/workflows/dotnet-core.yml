@@ -16,13 +16,9 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         node-version: 12.x
+    - uses: c-hive/gha-npm-cache@v1
     - name: Install Packages
-      uses: ktmud/cached-dependencies@master
-      with:
-        run: |
-            cache-restore npm
-            npm install
-            cache-save npm
+      run: npm install
     - name: Check Commit Message
       run: | 
         echo "${{github.event.head_commit.message}}" > commit.msg
