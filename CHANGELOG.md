@@ -1,3 +1,17 @@
+## [2.0.18](https://github.com/cdotyone/Core.Configuration/compare/v2.0.17...v2.0.18) (2020-07-23)
+
+
+### Bug Fixes
+
+* try first publish ([392acb7](https://github.com/cdotyone/Core.Configuration/commit/392acb7546ef2f3f1126ce390d19d422cf59e272))
+* try first publish ([25918a3](https://github.com/cdotyone/Core.Configuration/commit/25918a37bc7331a78326423e326fe4bfa8235eb5))
+* try first publish ([36b1b60](https://github.com/cdotyone/Core.Configuration/commit/36b1b602d44a325a89184d200a18c4b1253200d7))
+* try first publish ([99284f8](https://github.com/cdotyone/Core.Configuration/commit/99284f8cacc1e5f0f343108ad56c55796b5b850e))
+* try first publish ([78af104](https://github.com/cdotyone/Core.Configuration/commit/78af1048397fa543880e185ab0824a46bf4a3840))
+* try first publish ([6e19e53](https://github.com/cdotyone/Core.Configuration/commit/6e19e5359fbd4d7388632745e9bea985015335fa))
+
+
+
 ## [2.0.17](https://github.com/cdotyone/Core.Configuration/compare/v2.0.16...v2.0.17) (2020-07-23)
 
 
