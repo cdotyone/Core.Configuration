@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{2645500B-8125-4985-809B-179E693B1AF7}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		CHANGELOG.md = CHANGELOG.md
 		commitlint.config.js = commitlint.config.js
 		.github\workflows\dotnet-core.yml = .github\workflows\dotnet-core.yml
 		package.json = package.json
