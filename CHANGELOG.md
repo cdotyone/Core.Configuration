@@ -1,3 +1,12 @@
+## [2.0.19](https://github.com/cdotyone/Core.Configuration/compare/v2.0.18...v2.0.19) (2020-07-23)
+
+
+### Bug Fixes
+
+* add netstandard2.0 back ([6fdc4f2](https://github.com/cdotyone/Core.Configuration/commit/6fdc4f22b873d5137f97aecdc834bb856241d26f))
+
+
+
 ## [2.0.18](https://github.com/cdotyone/Core.Configuration/compare/v2.0.17...v2.0.18) (2020-07-23)
 
 
