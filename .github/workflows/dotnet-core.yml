@@ -17,7 +17,12 @@ jobs:
       with:
         node-version: 12.x
     - name: Install Packages
-      uses: bahmutov/npm-install@master
+      uses: uses: ktmud/cached-dependencies@master
+      with:
+        run: |
+            cache-restore npm
+            npm install
+            cache-save npm
     - name: Check Commit Message
       run: | 
         echo "${{github.event.head_commit.message}}" > commit.msg
@@ -51,3 +56,5 @@ jobs:
       run: |
         git commit -m "chore: commit v${{ steps.semver.outputs.new_version }} [ci skip]" -a
         git push origin:main --tags
+      env:
+        GITHUB_TOKEN: "${{ github.token }}"
