@@ -48,6 +48,7 @@ jobs:
         github-token: ${{ github.token }}
         tag-prefix: 'v'
         release-count: '20'
+    - name: Push
       uses: cdotyone/github-push@main
       with:
         version: "${{ steps.semver.outputs.new_version }}"
