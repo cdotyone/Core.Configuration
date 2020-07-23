@@ -1,6 +1,6 @@
 {
   "name": "configuration",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "description": "configuration",
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",

@@ -1,3 +1,12 @@
+## [2.0.13](https://github.com/cdotyone/Core.Configuration/compare/v2.0.12...v2.0.13) (2020-07-23)
+
+
+### Bug Fixes
+
+* force build ([54f83a3](https://github.com/cdotyone/Core.Configuration/commit/54f83a3216348ffb121e593df71d02a09c8bd95b))
+
+
+
 ## [2.0.12](https://github.com/cdotyone/Core.Configuration/compare/v2.0.11...v2.0.12) (2020-07-23)
 
 
