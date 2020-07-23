@@ -50,7 +50,9 @@ jobs:
         release-count: '20'
     - name: Push Changes
       run: |
-        git commit -m "chore: commit v${{ steps.semver.outputs.new_version }} [ci skip]" -a
-        git push origin:main --tags
+        git config --global user.name 'Chris Doty'
+        git config --global user.email 'cdotyone@users.noreply.github.com'
+        git commit -am "chore: commit v${{ steps.semver.outputs.new_version }} [ci skip]"
+        git push --tags
       env:
         GITHUB_TOKEN: "${{ github.token }}"
