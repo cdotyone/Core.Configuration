@@ -47,3 +47,7 @@ jobs:
         github-token: ${{ github.token }}
         tag-prefix: 'v'
         release-count: '20'
+    - name: Push Changes
+      run: |
+        git commit -m "chore: commit v${{ steps.semver.outputs.new_version }} [ci skip]" -a
+        git push origin:main --tags
