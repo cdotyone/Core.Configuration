@@ -12,7 +12,7 @@ namespace Core.Configuration
 		/// <summary>
 		/// The "assembly" name given of the provider.
 		/// 
-		/// In the form: assembly="Deloitte.Core.Configuration, Version=1.0.0.0, Culture=neutral"
+		/// In the form: assembly="Core.Configuration, Version=1.0.0.0, Culture=neutral"
 		/// </summary>
 		[ConfigurationProperty(ASSEMBLY, IsRequired = true)]
 		public string AssemblyName
@@ -29,7 +29,7 @@ namespace Core.Configuration
 		/// <summary>
 		/// The "type" name of the provider.
 		/// 
-		/// In the form of type="Deloitte.Core.Configuration.ConfigFileProvider"
+		/// In the form of type="Core.Configuration.ConfigFileProvider"
 		/// </summary>
 		[ConfigurationProperty(TYPE, IsRequired = true)]
 		public string TypeName
@@ -44,7 +44,7 @@ namespace Core.Configuration
 		private string _typeName;
 
 		/// <summary>
-		/// Trys to dyanmically create the provider and then returns the provider.
+		/// Try's to dynamically create the provider and then returns the provider.
 		/// </summary>
 		public IConfigurationProvider Provider
 		{

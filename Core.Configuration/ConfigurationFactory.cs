@@ -226,7 +226,7 @@ namespace Core.Configuration
 		/// </summary>
 		/// <param name="type">The type used to get the assembly that the configuration is bound to.  This is used for redirection of configuration sections between assembly versions</param>
 		/// <param name="sectionName">The name of the section to get</param>
-		/// <returns>The configuration section requested.  This returns a Deloitte.Core.Configuration.Section</returns>
+		/// <returns>The configuration section requested.  This returns a Core.Configuration.Section</returns>
 		public static ConfigurationSection ReadConfigSection(Type type, string sectionName)
         {
 			return ReadConfigSection(type, string.Empty, sectionName, null);
@@ -240,7 +240,7 @@ namespace Core.Configuration
 		/// <param name="type">The type used to get the assembly that the configuration is bound to.  This is used for redirection of configuration sections between assembly versions</param>
 		/// <param name="sectionName">The name of the section to get</param>
 		/// <param name="nullValue">The default configuration to provide in the event no configuration is provided</param>
-		/// <returns>The configuration section requested.  This returns a Deloitte.Core.Configuration.Section</returns>
+		/// <returns>The configuration section requested.  This returns a Core.Configuration.Section</returns>
 		public static ConfigurationSection ReadConfigSection(Type type, string sectionName, ConfigurationSection nullValue)
         {
 			return ReadConfigSection(type, string.Empty, sectionName, nullValue);
@@ -252,7 +252,7 @@ namespace Core.Configuration
 		/// <param name="type">The type used to get the assembly that the configuration is bound to.  This is used for redirection of configuration sections between assembly versions</param>
 		/// <param name="sourceName">The configuration name given to the provider in the configuration</param>
 		/// <param name="sectionName">The name of the section to get</param>
-		/// <returns>The configuration section requested.  This returns a Deloitte.Core.Configuration.Section</returns>
+		/// <returns>The configuration section requested.  This returns a Core.Configuration.Section</returns>
 		public static ConfigurationSection ReadConfigSection(Type type, string sourceName, string sectionName)
         {
 			return ReadConfigSection(type, sourceName, sectionName, null);
@@ -267,7 +267,7 @@ namespace Core.Configuration
 		/// <param name="sourceName">The configuration name given to the provider in the configuration</param>
 		/// <param name="sectionName">The name of the section to get</param>
 		/// <param name="nullValue">The default configuration to provide in the event no configuration is provided</param>
-		/// <returns>The configuration section.  This is normally a Deloitte.Core.Configuration.Section</returns>
+		/// <returns>The configuration section.  This is normally a Core.Configuration.Section</returns>
 		public static ConfigurationSection ReadConfigSection(Type type, string sourceName, string sectionName, ConfigurationSection nullValue)
         {
 			// make sure we have the parameters we need.
