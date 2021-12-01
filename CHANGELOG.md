@@ -1,3 +1,12 @@
+## [2.1.1](https://github.com/cdotyone/Core.Configuration/compare/v2.1.0...v2.1.1) (2021-12-01)
+
+
+### Bug Fixes
+
+* push not needed ([dbbfd1e](https://github.com/cdotyone/Core.Configuration/commit/dbbfd1e2ed694d2acd8ea0932dc4eac4f35300e8))
+
+
+
 # [2.1.0](https://github.com/cdotyone/Core.Configuration/compare/v2.0.19...v2.1.0) (2021-12-01)
 
 
