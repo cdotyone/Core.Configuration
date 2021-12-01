@@ -1,3 +1,12 @@
+## [2.1.2](https://github.com/cdotyone/Core.Configuration/compare/v2.1.1...v2.1.2) (2021-12-01)
+
+
+### Bug Fixes
+
+* update nuget packages ([32c9c3f](https://github.com/cdotyone/Core.Configuration/commit/32c9c3f82cf5c4d9025cc9c60fecf6fe5e14e8fc))
+
+
+
 ## [2.1.1](https://github.com/cdotyone/Core.Configuration/compare/v2.1.0...v2.1.1) (2021-12-01)
 
 
