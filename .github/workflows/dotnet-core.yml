@@ -37,7 +37,10 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-          dotnet-version: '2.2.108'
+        dotnet-version: |
+          5.0.x
+          6.0.x
+          2.2.x
     - name: Install Nuget Dependencies
       run: dotnet restore
     - name: Build .NET
