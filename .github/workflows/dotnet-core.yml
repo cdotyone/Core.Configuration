@@ -25,7 +25,7 @@ jobs:
         rm commit.msg
     - name: "Get Next Version"
       id: semver
-      uses: cdotyone/conventional-changelog-action@master
+      uses: cdotyone/conventional-changelog-action@v3.8.2
       with:
         github-token: ${{ github.token }}
         tag-prefix: 'v'
@@ -53,7 +53,7 @@ jobs:
     - name: Publish Nuget Package
       run: dotnet nuget push dist\*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_KEY }}
     - name: Conventional Changelog Action
-      uses: cdotyone/conventional-changelog-action@master
+      uses: cdotyone/conventional-changelog-action@v3.8.2
       with:
         github-token: ${{ github.token }}
         tag-prefix: 'v'
