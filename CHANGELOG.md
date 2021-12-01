@@ -1,3 +1,19 @@
+# [2.1.0](https://github.com/cdotyone/Core.Configuration/compare/v2.0.19...v2.1.0) (2021-12-01)
+
+
+### Bug Fixes
+
+* drop core 3.1 support ([a5e25d9](https://github.com/cdotyone/Core.Configuration/commit/a5e25d9e20ef4d82b1c670ba995f10813a3b52f5))
+* use custom changelog action ([c7295bd](https://github.com/cdotyone/Core.Configuration/commit/c7295bd747dcf24f04222d78fbf1eda24239de8e))
+* use v3.8.2 release on build ([d155178](https://github.com/cdotyone/Core.Configuration/commit/d1551781e4ca10f90d3e83bd874ae5da81fb5367))
+
+
+### Features
+
+* add net6.0 ([864dd1e](https://github.com/cdotyone/Core.Configuration/commit/864dd1eebc99929d748c4e764f59b409c9c982d1))
+
+
+
 ## [2.0.19](https://github.com/cdotyone/Core.Configuration/compare/v2.0.18...v2.0.19) (2020-07-23)
 
 
