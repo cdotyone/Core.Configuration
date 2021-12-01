@@ -40,7 +40,7 @@ jobs:
         dotnet-version: |
           5.0.x
           6.0.x
-          2.2.x
+          2.0.x
     - name: Install Nuget Dependencies
       run: dotnet restore
     - name: Build .NET
